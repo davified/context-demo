@@ -1,6 +1,5 @@
 import React from "react";
 import { ColorContext } from "./Contexts";
-import Component3 from "./Component3";
 import "./Component4.css";
 
 const Component4 = () => (
