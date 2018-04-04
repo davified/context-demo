@@ -4,7 +4,15 @@ import { UserContext } from "./UserContext";
 const Component3 = () => (
   <div>
     <UserContext.Consumer>
-      {value => <h1>Hello {value}</h1>}
+      {state => (
+        <h1
+          onClick={() => {
+            state.changeName("gordon");
+          }}
+        >
+          Hello {state.person.name}
+        </h1>
+      )}
     </UserContext.Consumer>
   </div>
 );
