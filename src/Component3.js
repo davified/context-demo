@@ -1,17 +1,10 @@
 import React from "react";
-import { UserContext, ColorContext } from "./Contexts";
+import { UserContext } from "./UserContext";
 
 const Component3 = () => (
   <div>
     <UserContext.Consumer>
-      {value => (
-        <div>
-          <h1>Hello {value}</h1>
-          <ColorContext.Consumer>
-            {colorValue => <h2>{colorValue}</h2>}
-          </ColorContext.Consumer>
-        </div>
-      )}
+      {value => <h1>Hello {value}</h1>}
     </UserContext.Consumer>
   </div>
 );
